@@ -2,7 +2,7 @@
 
 require_once 'vendor/autoload.php';
 
-echo "**** init.php **** <br>";
+echo "**** <init.php><br>";
 // name spaces list
 use WindowsAzure\Common\ServicesBuilder;	// wrapper 
 use WindowsAzure\Common\ServiceException;
@@ -15,4 +15,7 @@ use WindowsAzure\Common\ServiceException;
 $connectionString = "DefaultEndpointsProtocol=http;AccountName=hdstorage123;Account=WSNmmY8iVisBrhVpQtk+iYdL1AyyLcFlei1gqFAf6o3Fn7XBBwJuColgYGFzW4cAj2yVf/BCCJHlhIrPl2+6cg==";
 
 $tableRestProxy = ServicesBuilder::getInstance()->createTableService($connectionString);
+
+echo "</init.php> **** <br>";
+
 ?>
