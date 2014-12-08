@@ -13,6 +13,7 @@ use WindowsAzure\Common\ServiceException;
 
 //$connectionString = "DefaultEndpointsProtocol=http;AccountName=hdstorage123;AccountKey=WSNmmY8iVisBrhVpQtk+iYdL1AyyLcFlei1gqFAf6o3Fn7XBBwJuColgYGFzW4cAj2yVf/BCCJHlhIrPl2+6cg==";
 $connectionString = "DefaultEndpointsProtocol=http;AccountName=hdstoragesrv;AccountKey=WSNmmY8iVisBrhVpQtk+iYdL1AyyLcFlei1gqFAf6o3Fn7XBBwJuColgYGFzW4cAj2yVf/BCCJHlhIrPl2+6cg==";
+echo "$connectionString<br>";
 
 $tableRestProxy = ServicesBuilder::getInstance()->createTableService($connectionString);
 echo "$tableRestProxy<br>";
