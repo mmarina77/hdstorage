@@ -5,19 +5,14 @@
 <body>
 <h1>My ToDo List <span style="color:grey;">(powered by PHP and Azure Tables)</span></h1>
 <?php
-
 require_once 'init.php';
-
 try {
 	$result = $tableRestProxy->queryEntities('tasks');
 } catch(ServiceException $e) {
 	echo $e->getCode() . ': ' . $e->getMessage();
 }
-
 $entities = $result->getEntities();
 
-for($i = 0; $i < count($entities); $i++) {
-	if($i == 0) {
 		echo '<table border="1">
 			<tr>
 				<td>Name</td>
@@ -26,6 +21,10 @@ for($i = 0; $i < count($entities); $i++) {
 				<td>Mark Complete?</td>
 				<td>Delete?</td>
 			</tr>';
+			
+for($i = 0; $i < count($entities); $i++) {
+	if($i == 0) {
+
 	}
 	echo '
 		<tr>
@@ -38,12 +37,11 @@ for($i = 0; $i < count($entities); $i++) {
 				echo '<td><a href="markitem.php?complete=false&pk='.$entities[$i]->getPartitionKey().'&rk='.$entities[$i]->getRowKey().'">Unmark Complete</a></td>';
 			echo '<td><a href="deleteitem.php?pk='.$entities[$i]->getPartitionKey().'&rk='.$entities[$i]->getRowKey().'">Delete</a></td>
 		</tr>';
-	
-	if($i > 0) 
-		echo '</table>';
-	else
-		echo '<h3>No item on list.</h3>';
-}
+}	
+	//if($i > 0) 
+echo '</table>';
+	//else
+	//	echo '<h3>No item on list.</h3>';
 
 ?>
 <hr />
