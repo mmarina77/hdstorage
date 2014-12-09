@@ -15,11 +15,11 @@ $entities = $result->getEntities();
 
 		echo '<table border="1">
 			<tr>
-				<td>Name</td>
-				<td>Category</td>
-				<td>Date</td>
-				<td>Mark Complete?</td>
-				<td>Delete?</td>
+				<th>Name</th>
+				<th>Category</th>
+				<th>Date</th>
+				<th>Mark Complete?</th>
+				<th>Delete?</th>
 			</tr>';
 			
 for($i = 0; $i < count($entities); $i++) {
