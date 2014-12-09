@@ -2,6 +2,6 @@
 
 require_once 'init.php';
 
-$tableRestProxy->deleteEntities('tasks', $_GET['pk'], $_GET['rk']);
+$tableRestProxy->deleteEntity('tasks', $_GET['pk'], $_GET['rk']);
 header('Location: index.php');
 ?>
