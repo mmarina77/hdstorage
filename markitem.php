@@ -6,7 +6,7 @@ $result = $tableRestProxy->queryEntities('tasks', 'PartitionKey eq "'.$_GET['pk'
 $entities = $result->getEntities();
 $entity = $entities[0];
 
-$entity->setPropertyValue('complete', ($_GET['complete'] == 'true') ? 1 : 0);
+$entity->setPropertyValue('complete', ($_GET['complete'] == 'true') ? true : false);
 
 try {
 	$result = $tableRestProxy->updateEntity('tasks', $entity);
