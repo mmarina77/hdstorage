@@ -16,7 +16,7 @@ $connectionString = "DefaultEndpointsProtocol=http;AccountName=hdstoragesrv;Acco
 echo "$connectionString<br>";
 
 $tableRestProxy = ServicesBuilder::getInstance()->createTableService($connectionString);
-echo "$tableRestProxy<br>";
+//echo "$tableRestProxy<br>";
 
 echo "/init.php **** <br>";
 
