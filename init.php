@@ -2,7 +2,6 @@
 
 require_once 'vendor/autoload.php';
 
-echo "**** init.php<br>";
 function dump($arr) {
 echo "<pre>";
 print_r($arr);
