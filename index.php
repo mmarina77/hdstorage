@@ -48,15 +48,15 @@ echo '</table>';
 <form action="additem.php" method="post">
 	<table border="1">
 		<tr>
-			<td>Item: </td>
+			<th>Item: </th>
 			<td><input name="itemname" type="text" /></td>
 		</tr>
 		<tr>
-			<td>Category: </td>
+			<th>Category: </th>
 			<td><input name="category" type="text" /></td>
 		</tr>
 		<tr>
-			<td>Date: </td>
+			<th>Date: </th>
 			<td><input name="date" type="text" /></td>
 		</tr>
 	</table>
