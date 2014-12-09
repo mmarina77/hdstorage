@@ -8,7 +8,8 @@ use WindowsAzure\Table\Models\EdmType;
 
 $entity = new Entity();
 $entity->setPartitionKey('p1');
-$entity->setRowKey(('string')microtime(true));
+$data = ''. time();
+$entity->setRowKey($data);
 
 $entity->addProperty('name', EdmType::STRING, $_POST['itemname']);
 $entity->addProperty('category', EdmType::STRING, $_POST['category']);
