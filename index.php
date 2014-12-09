@@ -33,12 +33,11 @@ for($i = 0; $i < count($entities); $i++) {
 			<td>'.$entities[$i]->getPropertyValue('category').'</td>
 			<td>'.$entities[$i]->getPropertyValue('date').'</td>';
 			if($entities[$i]->getPropertyValue('complete') == false) 
-				echo '<td><a href="markitem.php?complete=true&pk='.$entities[$i]->getPartitionKey().'&rk='.$entities[$i]->getRowKey().'">Mark Complete</a></td>'
+				echo '<td><a href="markitem.php?complete=true&pk='.$entities[$i]->getPartitionKey().'&rk='.$entities[$i]->getRowKey().'">Mark Complete</a></td>';
 			else 
-				echo '<td><a href="markitem.php?complete=false&pk='.$entities[$i]->getPartitionKey().'&rk='.$entities[$i]->getRowKey().'">Unmark Complete</a></td>'
+				echo '<td><a href="markitem.php?complete=false&pk='.$entities[$i]->getPartitionKey().'&rk='.$entities[$i]->getRowKey().'">Unmark Complete</a></td>';
 			echo '<td><a href="deleteitem.php?pk='.$entities[$i]->getPartitionKey().'&rk='.$entities[$i]->getRowKey().'">Delete</a></td>
-		</tr>
-	';
+		</tr>';
 	
 	if($i > 0) 
 		echo '</table>';
